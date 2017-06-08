@@ -39,6 +39,13 @@ Description: This JSP file helps in registering a new user.
 			<label for="Zipcode" class="sr-only">Zipcode</label> 
 			<input id="Zipcode" class="form-control" placeholder="Zipcode" name="zipcode" required>
 			<p></p>
+			<%if(request.getAttribute("error")==null){%>
+			<h2></h2>
+			<%}
+        else
+        {%>
+			<h4><%=request.getAttribute("error")%></h4>
+			<%} %>
 			<%if(request.getAttribute("regmsg")==null){%>
 			<h2></h2>
 			<%}
