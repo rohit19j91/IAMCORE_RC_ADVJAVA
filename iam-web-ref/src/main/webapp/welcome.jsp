@@ -13,7 +13,6 @@ Description: This JSP file serves as the welcome page for the user.
 <title>Welcome</title>
 </head>
 <body>
-	<div xmlns="http://www.w3.org/1999/xhtml" class="bs-example">
 		<div class="jumbotron">
 			<div class="container">
 				<form action="logout" method="post">
