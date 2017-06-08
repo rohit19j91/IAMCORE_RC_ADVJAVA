@@ -33,7 +33,7 @@ Description: This JSP file provides the list of all the users and also provides 
 			<label for="displayName" class="col-sm-2 control-label">Name</label>
 
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="NameSearch" name="name"	required autofocus></input>
+				<input type="text" class="form-control" id="NameSearch" name="name" required></input>
 			</div>
 		</div>
 		<div class="form-group">
