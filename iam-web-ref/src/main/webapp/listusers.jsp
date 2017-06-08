@@ -18,6 +18,7 @@ Description: This JSP file provides the list of all the users and also provides 
 <body>
 	<!-- <div xmlns="http://www.w3.org/1999/xhtml" class="bs-example"> -->
 	<div class="container">
+	<a href="<%=request.getContextPath()%>/logout">Log out</a>
 		<h2 class="text-info">Identity Search</h2>
 		<a href="welcome.jsp">&lt;&lt; back</a>
 
