@@ -17,7 +17,6 @@ Description: This JSP file helps in updating the UID, Name and Address.
 <title>Updating Identity</title>
 </head>
 <body>
-	<div xmlns="http://www.w3.org/1999/xhtml" class="bs-example">
 		<div class="container">
 			<h2 class="text-info">Identity Modification</h2>
 			<a href="listusers.jsp">&lt;&lt; back</a>
@@ -58,7 +57,7 @@ Description: This JSP file helps in updating the UID, Name and Address.
 
 				<div class="col-sm-10">
 					<input type="email" id="inputEmail" class="form-control" name="ema"
-						value=<%=email%> readonly autofocus>
+						value=<%=email%> readonly>
 				</div>
 			</div>
 			<div class="form-group">
