@@ -24,14 +24,14 @@ public class LogoutServlet extends HttpServlet {
 	    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			//Helps in invalidating the session and kicking out the user
 	        request.getSession().invalidate();
-	        response.sendRedirect(request.getContextPath() + "login.jsp");
+	        response.sendRedirect(request.getContextPath() + "/login.jsp");
 	        LOGGER.info("The User was logged out successfully");
 	    }
 
 		 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			//Helps in invalidating the session and kicking out the user
 			 request.getSession().invalidate();
-		        response.sendRedirect(request.getContextPath() + "login.jsp");
+		        response.sendRedirect(request.getContextPath() + "/login.jsp");
 		        LOGGER.info("The User was logged out successfully");
 		    }
 	}
