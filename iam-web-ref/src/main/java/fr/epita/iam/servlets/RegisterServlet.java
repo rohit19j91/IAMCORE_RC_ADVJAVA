@@ -55,6 +55,9 @@ public class RegisterServlet extends HttpServlet {
         String country=req.getParameter("country");
         String zipcode=req.getParameter("zipcode");
         //Adding a new Identity and Address by creating an instance of the objects
+        try 
+        {
+        	// Error message for integrity constraint violation
         Identity identity = new Identity(uid, name, email, password);
         Address address=new Address(street,city,country,zipcode);
         adddao.write(address);
@@ -65,7 +68,14 @@ public class RegisterServlet extends HttpServlet {
         req.setAttribute("regmsg", "User registered successfully");
         rd = req.getRequestDispatcher("register.jsp");
         rd.forward(req, resp);
-        
+        }
+        catch(Exception e)
+        {
+        	//Catching the duplicate email error and posting it on the JSP Page
+         req.setAttribute("error","The Email address has already been used.");
+         rd = req.getRequestDispatcher("register.jsp");
+         rd.forward(req, resp);
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
