@@ -21,9 +21,6 @@
 		<property name="location" value="classpath:test.properties" />
 	</bean>
 
-
-	<!-- todo : use SpringPropertiesUtil Something to load the placeholders 
-		values below: -->
 	<bean id="dataSourceBean"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driver.name}" />
@@ -41,7 +38,6 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</prop>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.show_sql">true</prop>
-				<!-- <prop key="hibernate.default_schema">ROHIT</prop> -->
 			</props>
 		</property>
 	</bean>
